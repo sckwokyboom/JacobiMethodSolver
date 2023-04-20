@@ -99,7 +99,7 @@ double calculateDelta(std::vector<double> &omega) {
       y = calculateY(j);
       for (int k = 0; k < JacobiMethodSolverConfig::N; k++) {
         z = calculateZ(k);
-        deltaMax = std::max(deltaMax, (double) std::abs(omega[calculateIndex(i, j, k)] - phi(x, y, z)));
+        deltaMax = std::max(deltaMax, std::abs(omega[calculateIndex(i, j, k)] - phi(x, y, z)));
       }
     }
   }
